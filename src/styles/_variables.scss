@@ -1,0 +1,20 @@
+
+/* 
+    此文件为全局声明文件,尽量只声明变量和代码块
+    修改使用了变量的样式时,可直接在此处修改
+    点击vsCode底部的WatchSass即可实时看到修改后的效果(需安装Live Sass插件)
+*/
+
+$fwidth:100%;
+$fheight:100%;
+
+$textSize:16px;
+$textColor:#000;
+$borderColor:#000;
+$backColor:#fff;
+
+@mixin flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

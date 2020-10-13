@@ -18,6 +18,8 @@ module.exports = {
     'eol-last': 0,
     'indent': 0,
     'quotes': 0,
-    'semi': 0
+    'semi': 0,
+    'no-mixed-spaces-and-tabs': 0,
+    'no-multiple-empty-lines':[2,{"max":10}],
   }
 }
