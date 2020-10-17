@@ -21,5 +21,11 @@ module.exports = {
     'semi': 0,
     'no-mixed-spaces-and-tabs': 0,
     'no-multiple-empty-lines':[2,{"max":10}],
+    'space-before-function-paren':0,
+    'prefer-const':0,
+    'space-before-blocks':0,
+    'comma-spacing':0,
+    'padded-blocks':0,
+    'spaced-comment':0,
   }
 }

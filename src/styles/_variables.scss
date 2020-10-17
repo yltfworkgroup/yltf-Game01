@@ -5,16 +5,28 @@
     点击vsCode底部的WatchSass即可实时看到修改后的效果(需安装Live Sass插件)
 */
 
-$fwidth:100%;
-$fheight:100%;
-
+$menuheight:30px;//菜单窗口高度
+$viewbwidth:1px;//内容区线宽
+$viewborder:$viewbwidth+$viewbwidth;//主内容区容器总线宽
+$mainViewWH:calc(100% - #{$viewborder} - 6px);//主内容区内部宽高
 $textSize:16px;
+
+$menubkColor:rgba(0,0,255,0.9);//菜单窗口颜色
+$menubSColor:lightblue;//菜单窗口阴影颜色
 $textColor:#000;
 $borderColor:#000;
-$backColor:#fff;
+$backColor:#fff;//内容区背景颜色
 
-@mixin flexCenter{
+$borderStyle:solid;//线型
+
+@mixin flexCenter{//flex布局,垂直水平居中
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@mixin mainInView {
+    height: $mainViewWH;
+    width: $mainViewWH;
+    box-shadow: 0 0 5px 1px $borderColor;
+    background-color: mediumorchid;
 }

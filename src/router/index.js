@@ -1,11 +1,22 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import home from '../views/Home.vue'
+
 const routes = [
+  {
+    path:'/*',
+    redirect:'/home'
+  },
   {
     path: '/',
     name: 'home',
-    component: home
+    component:() => { return import('@/views/Home.vue') },
+    children:[{
+        path:'/proView',
+        name:'proView',
+        component:() => { return import('@/components/projectView.vue') }
+      }
+    ]
   }
+
   // ,{
   //   path: '/about',
   //   name: 'About',
