@@ -1,25 +1,21 @@
 # yltfgame01
 
-#已适配浏览器:
+# 已适配浏览器:
 ```
 Chrome
 ```
 
-
-## Project setup
+## 导入项目后运行命令
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 项目启动命令
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 项目打包命令
 ```
 npm run build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
