@@ -1,5 +1,11 @@
 # yltfgame01
 
+#已适配浏览器:
+```
+Chrome
+```
+
+
 ## Project setup
 ```
 npm install

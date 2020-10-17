@@ -98,6 +98,7 @@ export default {
         top:100%;
         left:0;
         display: none;
+        z-index: 10;
       }
     }
   }

@@ -29,4 +29,5 @@ $borderStyle:solid;//线型
     width: $mainViewWH;
     box-shadow: 0 0 5px 1px $borderColor;
     background-color: mediumorchid;
+    z-index:1;
 }

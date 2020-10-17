@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-     <div class="header">
+     <div class="header" @click="backhome">
          <span>{{title}}</span>
      </div>
      <div class="main">
@@ -10,6 +10,9 @@
              <router-view />
          </div>
 
+         <div class="homeView">
+
+         </div>
      </div>
      <div class="footer">
          <span>@DesignBy {{author}}, lastUpdate:{{lastUpdate}}</span>
@@ -57,6 +60,10 @@ export default {
             this.$router.push({ path:path,jquery:{ id:id } });
             console.log(id);
             console.log(path);
+        },
+        //回到首页
+        backhome(){
+            this.$router.push('/home');
         }
     }
 }
@@ -79,10 +86,17 @@ export default {
         span{
             font-size: $textSize;
         }
+        &:hover{
+            background-color: rgb(174, 116, 228);
+            span{
+                color:#fff;
+            }
+        }
     }
     .main{
         height: 85%;
         background-color: $backColor;
+        position: relative;
         .mainView{
             height: calc(100% - #{$menuheight} - #{$viewborder});
             width: calc(100% - #{$viewborder});
@@ -95,6 +109,16 @@ export default {
             &::-webkit-scrollbar{
                 display: none;
             }
+        }
+        .homeView{
+            height: calc(100% - #{$menuheight} - #{$viewborder} - 8px);
+            width: calc(100% - #{$viewborder} - 8px);
+            background-color: mediumspringgreen;
+            box-shadow: 0 0 5px 1px $borderColor;
+            position: absolute;
+            top:calc(#{$menuheight} + #{$viewborder} + 3px);
+            left:calc(#{$viewbwidth} + 4px);
+            z-index:0;
         }
     }
     .footer{
