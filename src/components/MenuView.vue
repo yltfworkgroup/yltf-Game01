@@ -5,7 +5,7 @@
         <span v-text="item.name"></span>
         <ul class="morelist" v-if="item.subs">
           <li class="liStyle" v-for="(ite,inde) in item.subs" :key="ite+inde">
-            <span v-text="ite.name" @click="viewChange(ite.id,ite.path)"></span>
+            <span v-text="ite.name" @click="viewChange(ite.id,ite.path,ite.name)"></span>
           </li>
         </ul>
       </li>
@@ -48,8 +48,8 @@ export default {
       }
     },
     methods: {
-      viewChange (id, path) {
-        this.$emit("routerto", id, path)
+      viewChange (id, path, name) {
+        this.$emit("routerto", id, path, name)
       }
     }
 }
@@ -98,7 +98,7 @@ export default {
         top:100%;
         left:0;
         display: none;
-        z-index: 10;
+        z-index:10;
       }
     }
   }

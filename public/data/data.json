@@ -3,35 +3,35 @@
     "author":"YltfWorkGroup",
     "lastUpdate":"2020.10.17",
     "menulistData":[
-        {"id":"01","name":"项目文档","path":"",
+        {"id":"01","name":"项目文档","path":"/project",
             "subs":[
-                {"id":"0101","name":"开发流程","path":""},
-                {"id":"0102","name":"详细文档","path":"/proView"}
+                {"id":"0101","name":"开发流程","path":"/devsort"},
+                {"id":"0102","name":"详细文档","path":"/proview"}
             ]
         },
-        {"id":"02","name":"小游戏","path":"",
+        {"id":"02","name":"小游戏","path":"/gameView",
             "subs":[
-                {"id":"0201","name":"未命名","path":""}
+                {"id":"0201","name":"未命名","path":"/game01"}
             ]
         },
-        {"id":"03","name":"工具","path":"",
+        {"id":"03","name":"工具","path":"/tools",
             "subs":[
-                {"id":"0301","name":"计算器","path":""}
+                {"id":"0301","name":"计算器","path":"/jisuanqi"}
             ]
         },
-        {"id":"04","name":"设置","path":"",
+        {"id":"04","name":"设置","path":"/config",
             "subs":[
-                {"id":"0401","name":"页面设置","path":""}
+                {"id":"0401","name":"页面设置","path":"/webconfig"}
             ]
         },
-        {"id":"05","name":"个人中心","path":"",
+        {"id":"05","name":"个人中心","path":"/user",
             "subs":[
-                {"id":"0501","name":"登录","path":""}
+                {"id":"0501","name":"登录","path":"/login"}
             ]
         },
-        {"id":"99","name":"关于作者","path":"",
+        {"id":"99","name":"关于作者","path":"/about",
             "subs":[
-                {"id":"9901","name":"支持作者","path":""}
+                {"id":"9901","name":"支持作者","path":"/author"}
             ]
         }
     ]

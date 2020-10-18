@@ -11,7 +11,7 @@
          </div>
 
          <div class="homeView">
-
+             <h1>首页</h1>
          </div>
      </div>
      <div class="footer">
@@ -38,15 +38,18 @@ export default {
         }
     },
     mounted() {
-        // 初始化主页面数据
-        this.getMainInfoData().then((res) => {
-            this.title = res.proTitle;
-            this.author = res.author;
-            this.lastUpdate = res.lastUpdate;
-            this.menulist = res.menulistData;
-        }); 
+        this.initInfoData();
     },
     methods:{
+        // 初始化主页面数据
+        initInfoData(){
+            this.getMainInfoData().then((res) => {
+                this.title = res.proTitle;
+                this.author = res.author;
+                this.lastUpdate = res.lastUpdate;
+                this.menulist = res.menulistData;
+            }); 
+        },
         //从data.json中获取主页的显示数据
         async getMainInfoData () {
             let reqdata = {
@@ -56,13 +59,14 @@ export default {
             return result
         },
 
-        routerTo(id, path){
+        routerTo(id, path, name){
+            this.title = name;
             this.$router.push({ path:path,jquery:{ id:id } });
-            console.log(id);
-            console.log(path);
+            console.log(id,path,name);
         },
         //回到首页
         backhome(){
+            this.initInfoData();
             this.$router.push('/home');
         }
     }
@@ -71,9 +75,6 @@ export default {
 
 <style scoped lang="scss">
 @import url("../styles/style.scss");
-
-
-
 .home{
     width: 100%;
     height: calc(100vh - 14px);
@@ -104,11 +105,7 @@ export default {
             border-style: $borderStyle;
             border-color: $borderColor;
             box-shadow: inset 0 0 5px 1px $borderColor;
-            overflow-y: scroll;
             @include flexCenter;
-            &::-webkit-scrollbar{
-                display: none;
-            }
         }
         .homeView{
             height: calc(100% - #{$menuheight} - #{$viewborder} - 8px);
@@ -118,6 +115,10 @@ export default {
             position: absolute;
             top:calc(#{$menuheight} + #{$viewborder} + 3px);
             left:calc(#{$viewbwidth} + 4px);
+            overflow-y: scroll;
+            &::-webkit-scrollbar{
+                display: none;
+            }
             z-index:0;
         }
     }
