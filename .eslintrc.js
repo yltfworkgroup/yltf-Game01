@@ -27,5 +27,6 @@ module.exports = {
     'comma-spacing':0,
     'padded-blocks':0,
     'spaced-comment':0,
+    'comma-dangle':0,
   }
 }

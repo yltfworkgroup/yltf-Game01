@@ -1,7 +1,7 @@
 {
     "proTitle":"Yltf-Project01",
     "author":"YltfWorkGroup",
-    "lastUpdate":"2020.10.17",
+    "lastUpdate":"2020.10.29",
     "menulistData":[
         {"id":"01","name":"项目文档","path":"/project",
             "subs":[
@@ -11,7 +11,7 @@
         },
         {"id":"02","name":"小游戏","path":"/gameView",
             "subs":[
-                {"id":"0201","name":"未命名","path":"/game01"}
+                {"id":"0201","name":"未命名","path":"/firstgame"}
             ]
         },
         {"id":"03","name":"工具","path":"/tools",

@@ -14,22 +14,19 @@ function createAjax(url,data){
 };
 
 async function get(url,data){
-    let result = axios.get(url,data)
+    return axios.get(url,data)
         .then((response) => {
             return response
         })
         .catch((error) => {  
             console.log(error); 
         });
-    // console.log(result);
-    return result;
 }
-async function post(url,data){
+async function postJson(url,data){
     createAjax(url,data)
 }
 
-
 export const ajax = {
-    post,
+    postJson,
     get
 }

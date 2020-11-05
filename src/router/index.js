@@ -9,15 +9,16 @@ const routes = [
     path: '/home',
     name: 'home',
     component:() => { return import('@/views/Home.vue') },
-    children:[{
+    children:[
+      {
         path:'/proview',
         name:'proview',
         component:() => { return import('@/components/projectView.vue') }
       },
       {
-        path:'/jisuanqi',
-        name:'jisuanqi',
-        component:() => { return import('@/components/jisuanqi.vue') }
+        path:'/firstgame',
+        name:'firstgame',
+        component:() => { return import('@/views/gamePage/firstgame.vue') }
       }
     ]
   }

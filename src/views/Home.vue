@@ -37,6 +37,11 @@ export default {
             menulist:[]
         }
     },
+    // beforRouterEnter(to,from,next){
+    //     next(vue => {
+    //         // vue.initInfoData();
+    //     });
+    // },
     mounted() {
         this.initInfoData();
     },
@@ -61,13 +66,13 @@ export default {
 
         routerTo(id, path, name){
             this.title = name;
-            this.$router.push({ path:path,jquery:{ id:id } });
+            this.$router.push({ path:path,query:{ id:id } });
             console.log(id,path,name);
         },
         //回到首页
         backhome(){
             this.initInfoData();
-            this.$router.push('/home');
+            this.$router.replace('/');
         }
     }
 }
