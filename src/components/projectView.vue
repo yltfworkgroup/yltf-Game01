@@ -1,6 +1,6 @@
 <template>
   <div class="projectView">
-      <h1>详细文档界面</h1>
+      <h1>这是详细文档界面</h1>
   </div>
 </template>
 
